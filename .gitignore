@@ -14,27 +14,26 @@ env/
 # Environment
 .env
 
-# Data files (too large for git)
-data/
+# Data files — synthetic and small; the app needs readmission_dataset.csv to run
 *.csv
+!/readmission_dataset.csv
 *.parquet
 *.pkl
 
-# Models
-backend/models/
+# Models — keep the metrics log the Methodology page reads; ignore the rest
+backend/models/*
+!backend/models/metrics_log.jsonl
 
 # Node
 node_modules/
 frontend/dist/
 
-# Airflow
-airflow/logs/
-airflow.db
-airflow.cfg
-
 # OS
 .DS_Store
 Thumbs.db
+
+# Word temp/lock files
+~$*.docx
 
 # IDE
 .vscode/
