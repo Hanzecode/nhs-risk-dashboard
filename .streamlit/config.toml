@@ -1,0 +1,53 @@
+# NHS Readmission Risk Dashboard — native theme
+# NHS Blue primary (#005EB8), Inter typeface, light + dark modes.
+
+[theme]
+primaryColor = "#005EB8"                 # NHS Blue
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+headingFont = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap"
+codeFont = "'JetBrains Mono':https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+baseFontSize = 15
+baseRadius = "10px"
+buttonRadius = "8px"
+showWidgetBorder = true
+showSidebarBorder = true
+linkUnderline = false
+headingFontWeights = [700, 600, 600, 600, 500, 500]
+
+# Semantic colours (risk tiers, status)
+redColor = "#D5281B"                      # NHS Red — high risk
+orangeColor = "#ED8B00"                   # NHS Warm Yellow — moderate
+greenColor = "#007F3B"                    # NHS Green — low risk
+blueColor = "#005EB8"
+
+# Chart palette — NHS-derived categorical colours
+chartCategoricalColors = ["#005EB8", "#41B6E6", "#007F3B", "#ED8B00", "#8A1538", "#330072", "#78BE20", "#AE2573"]
+chartSequentialColors = ["#E8EDEE", "#CCE0F0", "#99C2E1", "#66A3D2", "#3385C3", "#005EB8", "#004B93", "#00386E", "#002649", "#001325"]
+
+[theme.light]
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F0F4F5"      # NHS Grey 4 tint
+textColor = "#212B32"                      # NHS Black
+borderColor = "#D8DDE0"
+dataframeHeaderBackgroundColor = "#F0F4F5"
+
+[theme.dark]
+backgroundColor = "#0D1B2A"
+secondaryBackgroundColor = "#14273B"
+textColor = "#E8EDEE"
+borderColor = "#274563"
+dataframeHeaderBackgroundColor = "#14273B"
+
+[theme.light.sidebar]
+backgroundColor = "#F0F4F5"
+secondaryBackgroundColor = "#E8EDEE"
+textColor = "#212B32"
+borderColor = "#D8DDE0"
+primaryColor = "#005EB8"
+
+[theme.dark.sidebar]
+backgroundColor = "#0A1622"
+secondaryBackgroundColor = "#14273B"
+textColor = "#E8EDEE"
+borderColor = "#274563"
+primaryColor = "#41B6E6"
