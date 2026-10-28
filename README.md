@@ -11,7 +11,6 @@ simulated NHS data. Built with Polars, scikit-learn, and Streamlit.
 nhs-risk-dashboard/
 ├── backend/
 │   ├── processing/features.py         # Polars + Pandas feature engineering
-│   ├── ml/train.py                    # scikit-learn model + metrics
 │   ├── db/schema.sql                  # PostgreSQL schema (optional)
 │   └── requirements.txt
 ├── dashboard/
