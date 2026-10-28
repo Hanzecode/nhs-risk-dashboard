@@ -1,7 +1,7 @@
 # NHS Readmission Risk Dashboard
 
-A data science project predicting 30-day hospital readmission risk using
-simulated NHS data. Built with Polars, scikit-learn, and Streamlit.
+A data analyst project predicting 30-day hospital readmission risk using
+simulated NHS data. Built with Polars, and Streamlit.
 
 ---
 
@@ -84,24 +84,6 @@ Query parameters for `/api/patients`:
 
 ---
 
-## Pipeline
-
-`run_pipeline.py` runs 3 stages sequentially:
-
-```
-ingest → process → train
-```
-
-| Stage   | Script                  | What it does                              |
-|---------|-------------------------|--------------------------------------------|
-| ingest  | run_pipeline.py         | Validates CSV columns                     |
-| process | processing/features.py  | Cleans data, engineers 8 model features   |
-| train   | ml/train.py             | Trains GBM, scores patients, logs metrics |
-
-To run manually:
-```bash
-python backend/run_pipeline.py
-```
 
 ---
 
@@ -124,7 +106,6 @@ python backend/run_pipeline.py
 | Overview          | /           | Live counter, risk bar (WebSocket), recent events |
 | Disease analysis  | /diseases   | ICD-10 distribution, avg stay, readmission rate   |
 | Patient risk      | /patients   | Risk histogram, deprivation scatter, patient table|
-| Model performance | /model      | AUC/F1 over time, feature importance, run history |
 
 ---
 
@@ -133,7 +114,6 @@ python backend/run_pipeline.py
 | Layer         | Technology                        |
 |---------------|-----------------------------------|
 | Processing    | Polars + Pandas + NumPy           |
-| ML            | scikit-learn (GradientBoosting)   |
 | Dashboard     | Streamlit + Plotly                |
 | Storage       | PostgreSQL (optional)             |
 | Container     | Docker + Docker Compose           |
